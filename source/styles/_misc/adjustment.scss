@@ -29,23 +29,34 @@ body {
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
     min-height: 100%;
     position: relative;
     overflow: hidden;
+
+    &::after {
+        content: "";
+        display: block;
+        height: $footerHeight;
+    }
 }
 
 .maincontent {
     position: relative;
-    flex-grow: 1;
+    padding-bottom: 90px;
 }
 
 .container {
-    padding: 0 20px;
-    max-width: 1200px;
+    padding: 0 30px;
+    max-width: 1230px;
     margin: 0 auto; 
     @extend %clearfix;
+}
+
+.footer {
+    width: 100%;
+    height: $footerHeight;
+    position: relative;
+    margin-top: -$footerHeight;
 }
 
 h1,
@@ -78,10 +89,6 @@ p {
     margin: 0;
 }
 
-.footer {
-    width: 100%;
-    position: relative;
-}
 
 * {
     box-sizing: border-box;
