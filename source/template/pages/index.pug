@@ -4,5 +4,86 @@ block variables
   - var title = "Main page"
 
 block content
+  section.top-section.section
+    .container.top-section__container
+      .top-section__ofer.ofer
+        .ofer__title Deep event
+        .ofer__slogan Погружение в мир эмоций
+        h1.ofer__desc Организация уникальных мероприятий для особенных людей
+        button(class="button ofer__button" type="button") Отправить запрос
 
+  section.services-section.section
+    svg(preserveAspectRatio="none").section__wave
+      use(xlink:href=`assets/img/sprite.svg#wave`)
+    //- .section__wave
 
+    .container.services-section__container
+      h2.title Услуги
+      ul.services
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+
+              .rect__icon
+
+            span.services__desc Корпоративы
+  section.about-section.section
+    .about-section__left
+        button(class="button about-section__button" type="button") Подробнее о нас
+      
+    .about-section__right
+      h2.title.title--color-blue.about-section__title Услуги
+      .about-section__text
+        p.
+          Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+
+  section.steps-section.section
+    .container
+      h2.title Погружение в событие
+      ul.steps
+        li.steps__item
+          .steps__icon
+          .steps__text
+            p.
+              Оформление заявки и заполнение брифа
+        li.steps__item
+          .steps__icon
+          .steps__text
+            p.
+              Разработка концепции и подготовка предложения
+        li.steps__item
+          .steps__icon
+          .steps__text
+            p.
+              Согласование договора и реализация проекта
+
+  section.gallery-section.section
+    .container
+      h2.title.title--color-blue Услуги
+      ul.gallery
+        li.gallery__item
+          img(src="", alt="image")
+          .gallery__desc
+            p Событие
+
+  section.contacts-section
+    .container
+      h2.title.title--color-blue Контакты
+      .contacts-form
+        form(class="contacts-form__form" action="#" method="post")
+          .contacts-form__item
+            input(class="contacts-form__input" id="name" name="name" type="text")
+            label(for="name") Ваше имя
+          .contacts-form__item
+            input(class="contacts-form__input" id="email" name="email" type="text")
+            label(for="name") Email
+          .contacts-form__item
+            input(class="contacts-form__input" id="phone" name="phone" type="text")
+            label(for="phone") Телефон
+          .contacts-form__button
+            button(class="button" type="button") Отправить запрос
+
+      ul.socials-big.contacts-section__socials
+        li.socials-big__item
+          a(class="socials-big__link" href="#", target="_blank")
+            .socials-big__icon

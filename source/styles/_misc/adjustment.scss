@@ -1,16 +1,22 @@
 html {
-   @include hd {
-       font-size: 16px;
-   }
-   @include laptop {
-       font-size: 15px;
-   }
-   @include tablet {
-       font-size: 14px;
-   }
-   @include phone {
-       font-size: 13px;
-   }
+    box-sizing: border-box;
+    
+    @include hd {
+        font-size: 16px;
+    }
+    // @include laptop {
+    //     font-size: 15px;
+    // }
+    // @include tablet {
+    //     font-size: 14px;
+    // }
+    // @include phone {
+    //     font-size: 13px;
+    // }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body,
@@ -24,6 +30,7 @@ body {
     position: relative;
     margin: 0;
     background: #fff;
+    @include monts;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
 }
@@ -42,14 +49,13 @@ body {
 
 .maincontent {
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: $footerHeight;
 }
 
 .container {
     padding: 0 30px;
     max-width: 1230px;
     margin: 0 auto; 
-    @extend %clearfix;
 }
 
 .footer {
@@ -87,9 +93,4 @@ li {
 
 p {
     margin: 0;
-}
-
-
-* {
-    box-sizing: border-box;
 }

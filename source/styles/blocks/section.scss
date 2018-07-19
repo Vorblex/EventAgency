@@ -1,0 +1,11 @@
+.section {
+
+}
+
+.section__wave {
+    width: 100%;
+    position: absolute;
+    bottom: 97%;
+    @include centered(x);
+    fill: $blue;
+}

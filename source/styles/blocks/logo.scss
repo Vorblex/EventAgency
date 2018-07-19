@@ -1,0 +1,7 @@
+.logo {
+    @include monts(black);
+    font-size: 30px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}

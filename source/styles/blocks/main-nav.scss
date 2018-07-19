@@ -1,0 +1,40 @@
+.main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav__item {
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.main-nav__link {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    @include monts;
+    font-size: 15px;
+    color: $white;
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        @include centered(x);
+        width: 0;
+        height: 1px;
+        background: $yellow;
+        transition: .3s;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}

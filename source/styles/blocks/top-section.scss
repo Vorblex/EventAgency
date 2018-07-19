@@ -1,0 +1,16 @@
+.top-section {
+    background: $blue url(../img/bg_top.jpg) center top no-repeat;
+    background-size: cover;
+}
+
+.top-section__container {
+    display: flex;
+    min-height: 886px;
+    padding: 100px 0;
+    justify-content: center;
+}
+
+.top-section__ofer {
+    align-self: center;
+    margin-top: -70px;
+}
