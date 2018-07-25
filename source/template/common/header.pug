@@ -19,6 +19,8 @@ header.header
     .header__contacts
       .phones
         a(class="phones__toggle" href="tel:+38(067)444-04-04" target="_blank")
+          svg.phones__arrow
+            use(xlink:href=`assets/img/sprite.svg#download`)
           | +38(067)444-04-04
         ul.phones__dropdown
           li.row

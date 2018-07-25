@@ -1,11 +1,11 @@
 .section {
-
+    padding: 100px 0;
 }
 
 .section__wave {
     width: 100%;
     position: absolute;
-    bottom: 97%;
+    bottom: 100%;
     @include centered(x);
     fill: $blue;
 }

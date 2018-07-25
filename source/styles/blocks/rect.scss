@@ -1,0 +1,29 @@
+.rect {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rect__svg  {
+    max-width: 100%;
+    max-height: 100%;
+    fill: none;
+    stroke-width: 4px;
+    stroke: $yellow;
+    stroke-dasharray: 55 174;
+    stroke-dashoffset: -169.7;
+    transition: .5s ease-out;
+}
+
+.rect__icon {
+    position: absolute;
+    width: 46%;
+    @include centered;    
+}
+
+.rect__icon-svg {
+    max-width: 100%;
+    max-height: 100%;
+    fill: $yellow;
+}

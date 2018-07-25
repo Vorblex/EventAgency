@@ -1,0 +1,35 @@
+.services {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services__item {
+    width: calc(33.333333% - 30px );
+    margin: 0 15px 80px;
+    text-align: center;
+}
+
+.services__link {
+    text-decoration: none;
+    display: block;
+
+   &:hover .rect__svg {
+       stroke-dasharray: 397;
+       stroke-dashoffset: 0;
+       stroke-width: 2px;
+   }
+}
+
+.services__icon {
+    max-width: 39.2%;
+    max-height: 145px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.services__desc {
+    @include monts(bold);
+    font-size: 18px;
+    color: $white;
+}

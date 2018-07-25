@@ -4,7 +4,7 @@ block variables
   - var title = "Main page"
 
 block content
-  section.top-section.section
+  section.top-section
     .container.top-section__container
       .top-section__ofer.ofer
         .ofer__title Deep event
@@ -13,26 +13,73 @@ block content
         button(class="button ofer__button" type="button") Отправить запрос
 
   section.services-section.section
-    svg(preserveAspectRatio="none").section__wave
+    svg.section__wave
       use(xlink:href=`assets/img/sprite.svg#wave`)
-    //- .section__wave
-
     .container.services-section__container
-      h2.title Услуги
+      .services-section__title
+        h2.title Услуги
       ul.services
         li.services__item
           a(href="javascript:void(0)" class="services__link")
             .services__icon.rect
-
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
               .rect__icon
-
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#039-case`)
             span.services__desc Корпоративы
-  section.about-section.section
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
+              .rect__icon
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#021-calendar`)
+            span.services__desc Фестивали
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
+              .rect__icon
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#035-lecture`)
+            span.services__desc Конференции
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
+              .rect__icon
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#029-confetti-1`)
+            span.services__desc Дни рождения
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
+              .rect__icon
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#022-cake`)
+            span.services__desc Свадебные мероприятия
+        li.services__item
+          a(href="javascript:void(0)" class="services__link")
+            .services__icon.rect
+              svg.rect__svg
+                use(xlink:href=`assets/img/sprite.svg#rect`)
+              .rect__icon
+                svg.rect__icon-svg
+                  use(xlink:href=`assets/img/sprite.svg#047-scissors`)
+            span.services__desc Открытия
+
+  section.about-section
     .about-section__left
-        button(class="button about-section__button" type="button") Подробнее о нас
+      button(class="button about-section__button" type="button") Подробнее о нас
       
-    .about-section__right
-      h2.title.title--color-blue.about-section__title Услуги
+    .about-section__right.section
+      h2.title.title--color-blue.title--align-left О компании
       .about-section__text
         p.
           Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
@@ -41,18 +88,24 @@ block content
     .container
       h2.title Погружение в событие
       ul.steps
+        li.steps__bg
+          svg.steps__bg-svg
+            use(xlink:href=`assets/img/sprite.svg#steps-dashes`)
         li.steps__item
-          .steps__icon
+          svg.steps__icon
+            use(xlink:href=`assets/img/sprite.svg#list1`)
           .steps__text
             p.
               Оформление заявки и заполнение брифа
         li.steps__item
-          .steps__icon
+          svg.steps__icon
+            use(xlink:href=`assets/img/sprite.svg#014-brain`)
           .steps__text
             p.
               Разработка концепции и подготовка предложения
         li.steps__item
-          .steps__icon
+          svg.steps__icon
+            use(xlink:href=`assets/img/sprite.svg#011-goal-2`)
           .steps__text
             p.
               Согласование договора и реализация проекта
@@ -62,7 +115,27 @@ block content
       h2.title.title--color-blue Услуги
       ul.gallery
         li.gallery__item
-          img(src="", alt="image")
+          img(src="assets/img/gallery1.jpg", alt="image")
+          .gallery__desc
+            p Событие
+        li.gallery__item
+          img(src="assets/img/gallery2.jpg", alt="image")
+          .gallery__desc
+            p Событие
+        li.gallery__item
+          img(src="assets/img/gallery3.jpg", alt="image")
+          .gallery__desc
+            p Событие
+        li.gallery__item
+          img(src="assets/img/gallery4.jpg", alt="image")
+          .gallery__desc
+            p Событие
+        li.gallery__item
+          img(src="assets/img/gallery5.jpg", alt="image")
+          .gallery__desc
+            p Событие
+        li.gallery__item
+          img(src="assets/img/gallery6.jpg", alt="image")
           .gallery__desc
             p Событие
 

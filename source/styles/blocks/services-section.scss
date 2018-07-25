@@ -1,4 +1,18 @@
 .services-section {
     position: relative;
     background: $blue;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        background: $blue;
+    }
+}
+
+.services-section__title {
+    margin-bottom: 10px;
 }

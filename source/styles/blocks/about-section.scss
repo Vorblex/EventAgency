@@ -1,0 +1,29 @@
+.about-section {
+    display: flex;
+    justify-content: flex-end;
+    background: $white;
+}
+
+.about-section__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38.8%;
+    max-width: 1300px;
+    margin-right: 4.95%;
+    background: url('../img/bg_about.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.about-section__right {
+    background: $white;
+    width: 56.25%;
+    padding-right: 15px;
+}
+
+.about-section__text p {
+    @include monts;
+    max-width: 460px;
+    font-size: 15px;
+    color: $gray;
+}

@@ -1,0 +1,26 @@
+.gallery {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    width: calc(33.333333% - 30px );
+    margin: 0 15px 30px;
+    border-radius: 10px;
+    background: $black;
+    
+    img {
+        display: block;
+    }
+}
+
+.gallery__desc {
+    position: absolute;
+    
+    p {
+
+    }
+}

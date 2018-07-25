@@ -1,0 +1,21 @@
+.title {
+    margin-bottom: 80px;
+    @include monts(black);
+    font-size: 36px;
+    color: $white;
+    text-align: center;
+
+    &--align {
+
+        &-left {
+            text-align: left;
+        }
+    }
+
+    &--color {
+
+        &-blue {
+            color: $blue;
+        }
+    }
+}
