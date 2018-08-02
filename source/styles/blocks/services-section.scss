@@ -5,10 +5,11 @@
     &::before {
         content: "";
         position: absolute;
-        height: 5px;
+        z-index: 0;
+        height: 4px;
         left: 0;
         right: 0;
-        bottom: 100%;
+        top: -2px;
         background: $blue;
     }
 }

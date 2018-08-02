@@ -1,5 +1,5 @@
 .section {
-    padding: 100px 0;
+    padding: rem(90px) 0;
 }
 
 .section__wave {
@@ -8,4 +8,19 @@
     bottom: 100%;
     @include centered(x);
     fill: $blue;
+
+    @include hd {
+        height: 110px;
+    }
+
+    @include laptop {
+        height: 90px;
+    }
+
+    @include tablet {
+        height: 70px;
+    }
+    @include phone {
+        height: 40px;
+    }
 }

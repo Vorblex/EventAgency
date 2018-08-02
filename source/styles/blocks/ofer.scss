@@ -4,26 +4,31 @@
 
 .ofer__title {
     @include monts(black);
-    font-size: 26px;
+    font-size: rem(26px);
     text-transform: uppercase;
     color: $yellow;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
+
 }
 
 .ofer__slogan {
     @include monts(black);
-    font-size: 47px;
+    font-size: rem(47px);
     text-transform: uppercase;
     color: $white;
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
+
+    @include laptop {
+        font-size: rem(35px);
+    }
 }
 
 
 .ofer__desc {
-    max-width: 400px;
-    margin: 0 auto 25px;
+    max-width: rem(400px);
+    margin: 0 auto rem(25px);
     @include monts(medium);
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 1.3;
     color: $white;
 }

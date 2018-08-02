@@ -4,15 +4,15 @@ html {
     @include hd {
         font-size: 16px;
     }
-    // @include laptop {
-    //     font-size: 15px;
-    // }
-    // @include tablet {
-    //     font-size: 14px;
-    // }
-    // @include phone {
-    //     font-size: 13px;
-    // }
+    @include laptop {
+        font-size: 15px;
+    }
+    @include tablet {
+        font-size: 14px;
+    }
+    @include phone {
+        font-size: 13px;
+    }
 }
 
 *, *::before, *::after {
@@ -44,18 +44,37 @@ body {
         content: "";
         display: block;
         height: $footerHeight;
+
+        @include phone {
+            height: $footerHeight + 80px;
+        }
     }
 }
 
 .maincontent {
     position: relative;
-    padding-bottom: $footerHeight;
 }
 
 .container {
-    padding: 0 30px;
-    max-width: 1230px;
+    padding: 0 15px;
+    max-width: 1200px;
     margin: 0 auto; 
+
+    @include hd {
+        max-width: 960px;
+    }
+
+    @include laptop {
+        max-width: 720px;
+    }
+
+    @include tablet {
+        max-width: 540px;
+    }
+
+    @include phone {
+        width: auto;
+    }
 }
 
 .footer {
@@ -63,6 +82,11 @@ body {
     height: $footerHeight;
     position: relative;
     margin-top: -$footerHeight;
+    
+    @include phone {
+        height: $footerHeight + 80px;
+        margin-top: -($footerHeight + 80px);
+    }
 }
 
 h1,

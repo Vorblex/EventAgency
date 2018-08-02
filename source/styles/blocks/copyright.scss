@@ -1,0 +1,15 @@
+.copyright {
+    max-width: 50%;
+
+    p {
+        @include monts(light);
+        font-size: 13px;
+        text-align: center;
+        color: $white;
+    }
+
+    @include phone {
+        order: 1;
+        max-width: 100%;
+    }
+}

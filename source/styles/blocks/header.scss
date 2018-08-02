@@ -2,15 +2,17 @@
     position: fixed;
     z-index: 500;
     width: 100%;
-    background-color:  rgba($black, 0.3);
+    background-color:  rgba($header, 0.55);
 }
 
 .header__container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     min-height: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 15px 10px;
 }
 
 .header__logo {
@@ -18,12 +20,32 @@
     flex-grow: 1;
     max-width: 200px;
     align-items: center;
+    margin-right: 25px;
+
+    @include tablet {
+        margin-right: 0;
+    }
 }
 
 .header__menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 25px;
+    padding-top: 3px;
+    
+    @include laptop {
+        padding-top: 6px;
+    }
+    
+    @include tablet {
+        max-width: 200px;
+        order: 1;
+        flex-grow: 1;
+        justify-content: flex-end;
+        padding-top: 5px;
+        margin-right: 0;
+    }
 }
 
 .header__contacts {
@@ -32,4 +54,11 @@
     max-width: 200px;
     align-items: center;
     justify-content: flex-end;
+    flex-shrink: 0;
+
+    @include tablet {
+        padding-top: 4px;
+        flex-grow: 0;
+        max-width: auto;
+    }
 }

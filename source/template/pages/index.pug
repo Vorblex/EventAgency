@@ -78,7 +78,7 @@ block content
     .about-section__left
       button(class="button about-section__button" type="button") Подробнее о нас
       
-    .about-section__right.section
+    .about-section__right
       h2.title.title--color-blue.title--align-left О компании
       .about-section__text
         p.
@@ -112,51 +112,70 @@ block content
 
   section.gallery-section.section
     .container
-      h2.title.title--color-blue Услуги
+      h2.title.title--color-blue Галерея
       ul.gallery
         li.gallery__item
           img(src="assets/img/gallery1.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра 
         li.gallery__item
           img(src="assets/img/gallery2.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра
+              p Открытие торгового центра
+              p Открытие торгового центра
         li.gallery__item
           img(src="assets/img/gallery3.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра
         li.gallery__item
           img(src="assets/img/gallery4.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра
         li.gallery__item
           img(src="assets/img/gallery5.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра
         li.gallery__item
           img(src="assets/img/gallery6.jpg", alt="image")
           .gallery__desc
-            p Событие
+            .gallery__text
+              p Открытие торгового центра
 
-  section.contacts-section
+  section.contacts-section.section
     .container
-      h2.title.title--color-blue Контакты
-      .contacts-form
+      h2.title Контакты
+      .contacts-form.contacts-section__form
         form(class="contacts-form__form" action="#" method="post")
-          .contacts-form__item
-            input(class="contacts-form__input" id="name" name="name" type="text")
-            label(for="name") Ваше имя
-          .contacts-form__item
-            input(class="contacts-form__input" id="email" name="email" type="text")
-            label(for="name") Email
-          .contacts-form__item
-            input(class="contacts-form__input" id="phone" name="phone" type="text")
-            label(for="phone") Телефон
+          .contacts-form__items
+            .contacts-form__item
+              input(class="contacts-form__input" id="name" name="name" type="text" placeholder="Ваше имя")
+              label(class="contacts-form__label" for="name") Ваше имя
+            .contacts-form__item
+              input(class="contacts-form__input" id="email" name="email" type="text" placeholder="Email")
+              label(class="contacts-form__label" for="name") Email
+            .contacts-form__item
+              input(class="contacts-form__input" id="phone" name="phone" type="text" placeholder="Телефон")
+              label(class="contacts-form__label" for="phone") Телефон
           .contacts-form__button
             button(class="button" type="button") Отправить запрос
 
-      ul.socials-big.contacts-section__socials
-        li.socials-big__item
-          a(class="socials-big__link" href="#", target="_blank")
-            .socials-big__icon
+      .contacts-section__socials
+        ul.socials-big
+          li.socials-big__item
+            a(class="socials-big__link" href="#", target="_blank")
+              svg.socials-big__icon
+                use(xlink:href=`assets/img/sprite.svg#006-phone-call-1`)
+          li.socials-big__item
+            a(class="socials-big__link" href="#", target="_blank")
+              svg.socials-big__icon
+                use(xlink:href=`assets/img/sprite.svg#003-telegram-logo-1`)
+          li.socials-big__item
+            a(class="socials-big__link" href="#", target="_blank")
+              svg.socials-big__icon
+                use(xlink:href=`assets/img/sprite.svg#002-viber`)

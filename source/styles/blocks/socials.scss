@@ -1,0 +1,33 @@
+.socials {
+    display: flex;
+}
+
+.socials__item {
+    margin-right: 14px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    display: flex;
+    overflow: hidden;
+    background: rgba($white, .2);
+    padding: 8px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    -webkit-tap-highlight-color: transparent;
+    
+    &:hover {
+        background: rgba($white, .5);
+    }
+}
+
+.socials__icon {
+    width: 27px;
+    height: 27px;
+    fill: $yellow;
+}

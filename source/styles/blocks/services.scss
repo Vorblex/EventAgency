@@ -2,12 +2,27 @@
     margin: 0 -15px;
     display: flex;
     flex-wrap: wrap;
+
+    @include phone {
+        display: block;
+        margin: 0;
+    }
 }
 
 .services__item {
-    width: calc(33.333333% - 30px );
+    width: calc(33.33333333% - 30px );
     margin: 0 15px 80px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    @include tablet {
+    width: calc(50% - 30px );
+    }
+
+    @include phone {
+    width: 100%;
+    margin: 0 auto 20px;
+    }
 }
 
 .services__link {
@@ -22,10 +37,14 @@
 }
 
 .services__icon {
-    max-width: 39.2%;
-    max-height: 145px;
+    max-width: 145px;
     margin: 0 auto;
     margin-bottom: 16px;
+
+    @include phone {
+        // max-width: 200px;
+        margin-bottom: 10px;
+    }
 }
 
 .services__desc {

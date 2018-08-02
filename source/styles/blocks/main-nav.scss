@@ -1,21 +1,101 @@
+// .main-nav {
+    
+//     @include tablet {
+//         // display: none;
+//         position: fixed;
+//         z-index: 1000;
+//         top: 0;
+//         right: 0;
+//         left: 0;
+//         bottom: 0;
+//         background: rgba(34,37,77, 0.8);
+        
+//     }
+// }
+
+.main-nav {
+
+    @include tablet{
+    // display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+&::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: rgba(34,37,77, 0.8); 
+    transition: .7s;
+    }
+
+    &::before {
+        left: 0;  
+    }
+
+    &::after {
+        right: 0;
+    }
+
+    &.active {
+        visibility: visible;
+
+        &::before, &::after {
+            width: 50%; 
+        }
+
+        .main-nav__item {
+            opacity: 1;
+            transform: scale3d(1,1,1);
+            transition: 0.3s cubic-bezier(.77,.6,.31,1.4) 0.7s;
+        }
+    }
+}
+
 .main-nav__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+
+    @include tablet {
+        position: absolute;
+        z-index: 10;
+        flex-direction: column;
+        @include centered;
+    }
 }
 
 .main-nav__item {
     margin-right: 40px;
-
+    
     &:last-child {
         margin-right: 0;
+    }
+
+    @include laptop {
+        margin-right: 22px;
+    }
+
+    @include tablet {
+        opacity: 0;
+        position: relative;
+        transform: scale3d(0,0,0);
+        transition: none;
+        margin: 0 0 25px 0;
     }
 }
 
 .main-nav__link {
     position: relative;
     display: block;
-    padding: 10px 0;
+    padding: 6px 0;
     @include monts;
     font-size: 15px;
     color: $white;
@@ -24,7 +104,7 @@
     &::after {
         content: "";
         position: absolute;
-        bottom: 7px;
+        bottom: 0;
         @include centered(x);
         width: 0;
         height: 1px;
@@ -36,5 +116,13 @@
         &::after {
             width: 100%;
         }
+    }
+
+    @include laptop {
+        font-size: 14px;
+    }
+
+    @include tablet {
+        font-size: 22px;
     }
 }

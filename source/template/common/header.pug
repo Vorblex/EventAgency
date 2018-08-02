@@ -1,8 +1,10 @@
 header.header
-  .container.header__container
+  .header__container
     .header__logo
       a(class="logo" href="#top") De
     .header__menu
+      a(href="#").hamburger
+        .hamburger__elem 
       nav.main-nav
         ul.main-nav__list
           li.main-nav__item
@@ -18,15 +20,21 @@ header.header
 
     .header__contacts
       .phones
-        a(class="phones__toggle" href="tel:+38(067)444-04-04" target="_blank")
-          svg.phones__arrow
-            use(xlink:href=`assets/img/sprite.svg#download`)
-          | +38(067)444-04-04
-        ul.phones__dropdown
-          li.row
-          li.phones__item
-            a(class="phones__link" href="tel:+38(067)444-04-04" target="_blank")
-              | +38(067)444-04-04
-          li.phones__item
-            a(class="phones__link" href="tel:+38(067)444-04-04" target="_blank")
-              | +38(067)444-04-04
+        svg.phones__arrow
+          use(xlink:href=`assets/img/sprite.svg#download`)
+        .phones__content
+          svg.phones__icon
+            use(xlink:href=`assets/img/sprite.svg#006-phone-call-1`)
+          a(class="phones__toggle" href="tel:+38(067)444-04-04" target="_blank")
+            | +38(067)444-04-04
+          ul.phones__dropdown
+            li.phones__drop-arrow
+            li.phones__item
+              a(class="phones__link" href="tel:+38(067)444-04-04" target="_blank")
+                | +38(067)444-04-04
+            li.phones__item
+              a(class="phones__link" href="tel:+38(067)444-04-04" target="_blank")
+                | +38(067)333-03-03
+            li.phones__item
+              a(class="phones__link" href="tel:+38(067)444-04-04" target="_blank")
+                | +38(067)222-02-02

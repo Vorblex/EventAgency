@@ -2,6 +2,10 @@
     display: flex;
     justify-content: flex-end;
     background: $white;
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .about-section__left {
@@ -10,15 +14,28 @@
     align-items: center;
     width: 38.8%;
     max-width: 1300px;
+    min-height: 300px;
     margin-right: 4.95%;
     background: url('../img/bg_about.jpg') center no-repeat;
     background-size: cover;
+
+    @include tablet {
+        width: 100%;
+        margin: auto;
+        order: 1;
+    }
 }
 
 .about-section__right {
     background: $white;
     width: 56.25%;
+    padding: rem(90px) 0;
     padding-right: 15px;
+
+    @include tablet {
+        width: 100%;
+        padding-left: 15px;
+    }
 }
 
 .about-section__text p {
