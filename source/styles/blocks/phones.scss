@@ -88,15 +88,23 @@
     &::before {
         content: "";
         position: absolute;
-        top: -6px;
-        left: -10px;
+        top: -14px;
+        left: -12px;
         right: 0;
-        height: 10px;
+        height: 15px;
+
+        @include tablet {
+            top: -23px;
+            left: 0;
+            right: 0;
+            height: 25px;
+        }
     }
 
     @include tablet {
         top: 49px;
     }
+
 }
 
 .phones__drop-arrow {

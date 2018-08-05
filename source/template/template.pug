@@ -28,6 +28,8 @@ html(lang="ru-RU")
         block content
     include ./common/footer 
     
-    //- include ./common/preloader
+    .overlay
+      .popup
     script(src="assets/js/foundation%=suffix=%.js%=version=%")
+    //- script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")
     script(src="assets/js/app%=suffix=%.js%=version=%")

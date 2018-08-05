@@ -1,28 +1,14 @@
-// .main-nav {
-    
-//     @include tablet {
-//         // display: none;
-//         position: fixed;
-//         z-index: 1000;
-//         top: 0;
-//         right: 0;
-//         left: 0;
-//         bottom: 0;
-//         background: rgba(34,37,77, 0.8);
-        
-//     }
-// }
-
 .main-nav {
 
     @include tablet{
-    // display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 150%;
+        @include centered(y);
 }
 
 &::before, &::after {
@@ -31,7 +17,7 @@
     top: 0;
     bottom: 0;
     width: 0;
-    background: rgba(34,37,77, 0.8); 
+    background: rgba($black, 0.7); 
     transition: .7s;
     }
 
@@ -43,7 +29,7 @@
         right: 0;
     }
 
-    &.active {
+    &--active {
         visibility: visible;
 
         &::before, &::after {
@@ -74,6 +60,7 @@
 
 .main-nav__item {
     margin-right: 40px;
+    -webkit-tap-highlight-color: transparent;   
     
     &:last-child {
         margin-right: 0;
@@ -88,7 +75,24 @@
         position: relative;
         transform: scale3d(0,0,0);
         transition: none;
-        margin: 0 0 25px 0;
+        margin-right: 0;
+        margin-bottom: 25px;
+        
+        @include landscape {
+            margin-bottom: 13px;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--active {
+        .main-nav__link {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -100,6 +104,7 @@
     font-size: 15px;
     color: $white;
     text-decoration: none;
+    transition: .3s;
 
     &::after {
         content: "";
@@ -113,9 +118,10 @@
     }
 
     &:hover {
-        &::after {
-            width: 100%;
-        }
+        color: $yellow;
+        // &::after {
+        //     width: 100%;
+        // }
     }
 
     @include laptop {
@@ -123,6 +129,6 @@
     }
 
     @include tablet {
-        font-size: 22px;
+        font-size: 25px;
     }
 }

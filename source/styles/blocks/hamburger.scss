@@ -2,7 +2,8 @@
     display: none;
     position: relative;
     z-index: 1100;
-
+    -webkit-tap-highlight-color: transparent;
+    
     &::before, &::after {
         content: "";
         display: block;
@@ -13,10 +14,10 @@
         transition: .35s ease; 
     }
     
-    &.active {
+    &--active {
     
         &::before {
-            transform: translateY(15px) translateX(0) rotate(-45deg);
+            transform: translateY(10px) translateX(0) rotate(-45deg);
         }
     
         .hamburger__elem {
@@ -24,7 +25,7 @@
         }
     
         &::after {
-            transform: translateY(-15px) translateX(0) rotate(45deg);
+            transform: translateY(-10px) translateX(0) rotate(45deg);
         }
     }
 
@@ -38,7 +39,7 @@
     display: block;
     width: 40px;
     height: 3px;
-    margin: 10px 0;
+    margin: 7px 0;
     border-radius: 5px;
     background: $white;
 }

@@ -38,9 +38,11 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "gsap": "^2.0.1",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
+    "scrollmagic": "^2.0.5",
     "svg4everybody": "^2.1.9",
     "tapjs": "^1.0.9"
   }
